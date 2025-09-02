@@ -7,32 +7,30 @@ The purpose of this lab is to **get hands-on experience with a new programming l
 
 ## Task
 
-Install Zig, set up a development and debug environment for Zig in **Visual Studio Code**, and write a program in a file called `hello.zig` that does the following:
-
-1. **Set up and run Zig**
-   - Install Zig on your computer  
+Install Zig, set up a development and debug environment for Zig in **Visual Studio Code**.
    - Verify your installation with:  
      ```bash
      zig version
-     ```  
+     ```
+Write a program in a file called `hello.zig` that does the following:
 
-2. **Command-line input and conditional logic**
+1. **Command-line input and conditional logic**
    - Accept a **name** as a command-line argument.  
    - If no argument is provided, print:  
      ```
      Usage: hello <name>
      ```  
 
-3. **Functions and output**
+2. **Functions and output**
    - Define a **function** that takes a name and returns the string `Hello <Name>`.  
    - Use that function to generate the output.  
 
-4. **Control flow practice**
+3. **Control flow practice**
    - Print the greeting a total of **10 times**:  
      - **5 times using a `for` loop**  
      - **5 times using a `while` loop**  
 
-5. **Debugging in Visual Studio Code**
+4. **Debugging in Visual Studio Code**
    - Configure debugging in VS Code for Zig (using a `launch.json` or the built-in debugger).  
    - You should be able to **set a breakpoint** in your code and confirm that the debugger **stops execution at that point**.
    - Take a screenshot of the debugger while it is stopped and show that value of the variable containing the name that was input on the command line.
