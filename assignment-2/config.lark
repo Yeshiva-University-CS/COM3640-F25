@@ -1,0 +1,32 @@
+start: section+
+
+section: "[" NAME "]" setting+
+
+setting: NAME "=" value
+
+value: NUMBER     -> number_val
+     | STRING     -> string_val
+     | BOOLEAN    -> bool_val
+     | list       -> list_val
+
+list: "[" NUMBER ("," NUMBER)* "]"
+
+// ==================================================================
+// TERMINALS
+// ==================================================================
+
+NAME: /[a-z_][a-z0-9_]*/
+NUMBER: /[0-9]+/
+STRING: /"[^"]*"/
+BOOLEAN: "true" | "false"
+COMMENT: /#[^\n]*/
+
+// ==================================================================
+// IMPORTS AND IGNORES
+// ==================================================================
+
+%import common.WS
+%import common.NEWLINE
+%ignore WS
+%ignore NEWLINE
+%ignore COMMENT
